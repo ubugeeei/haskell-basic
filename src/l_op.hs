@@ -16,6 +16,9 @@ main = do
   print r
   print m
 
+  print s
+  print _s
+
 getByIndex::Int
 getByIndex = [1, 2, 3] !! 2
 
@@ -54,3 +57,9 @@ r = reverse [1, 2, 3]
 
 m::[Int]
 m = map (*2) [1, 2, 3]
+
+s::[Int]
+s = [x * x | x <- [1..5]]
+
+_s::[Int]
+_s = [x * x | x <- [1..5], x /= 3]
