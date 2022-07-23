@@ -2,6 +2,7 @@ main:: IO ()
 main = do
   dol
   dolim
+  bd
 
 -- $
 dol:: IO ()
@@ -19,9 +20,9 @@ dolim = print $! sum $! map (*2) $! filter even [1..10]
 -- print $! sum $! [4, 8, 12, 16, 20]
 -- print 60
 
-
--- `seq`
 -- <-
--- =<<
--- >>=
--- >>
+-- bind
+bd:: IO ()
+bd = do
+  s <- getLine
+  print s
