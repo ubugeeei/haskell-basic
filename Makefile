@@ -1,4 +1,4 @@
-F=main
+F=hello
 
 run:
 	make mkdist && make build && ./dist/$F
